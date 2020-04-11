@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/quiz_screen.dart';
 
 class HomeScreenItem extends StatelessWidget {
   final String title;
@@ -7,10 +8,9 @@ class HomeScreenItem extends StatelessWidget {
   HomeScreenItem(this.title, this.imgUrl);
 
   void selectCategory(BuildContext ctx) {
-    // Navigator.of(ctx).pushNamed(CategoryMealsScreen.routeName, arguments: {
-    //   'id': id,
-    //   'title': title,
-    // });
+    Navigator.of(ctx).pushNamed(QuizScreen.routeName, arguments: {
+      'title': title,
+    });
   }
 
   @override

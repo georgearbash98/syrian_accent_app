@@ -6,7 +6,7 @@ const GOVERNORATES = const [
   'حمص',
 ];
 
-const Damascus = const [
+const DAMASCUS = const [
   Question(
     question: "مرَسّتأ",
     allAnswers: [

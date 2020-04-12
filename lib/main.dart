@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: {
-        '/' : (ctx) => HomeScreen(),
+        HomeScreen.routeName : (ctx) => HomeScreen(),
         QuizScreen.routeName: (ctx) => QuizScreen(),
         CreditsScreen.routeName: (ctx) => CreditsScreen() 
       },

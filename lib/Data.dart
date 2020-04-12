@@ -1,9 +1,12 @@
 import './models/Question.dart';
 
 const GOVERNORATES = const [
-  'دمشق',
-  'حلب',
-  'حمص',
+  'شامي',
+  'حلبي',
+  'حمصي',
+  'حموي',
+  'درعاوي',
+  'جزراوي',
 ];
 
 const DAMASCUS = const [

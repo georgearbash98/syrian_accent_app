@@ -38,16 +38,20 @@ class Quiz extends StatelessWidget {
           child: Text(answerTxt),
           onPressed: () {
             int score = 0;
-            if(questions[questionIndex].allAnswers[rightIndex]== answerTxt)
-            score = 1;
-             answerQuestion(score);
+            if (questions[questionIndex].allAnswers[rightIndex] == answerTxt)
+              score = 1;
+            answerQuestion(score);
           },
         ),
       );
     }
 
     return Column(children: [
+      SizedBox(height: 10),
+      Text('${questions.length}/${questionIndex + 1} السؤال'),
+      Divider(thickness: 3),
       _question(questions[questionIndex].question),
+      Divider(thickness: 3),
       ...questions[questionIndex].allAnswers.map((answer) {
         return _answers(answer);
       }).toList()

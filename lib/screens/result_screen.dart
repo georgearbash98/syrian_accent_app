@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syrian_accent/screens/home_screen.dart';
 
 class ResultScreen extends StatelessWidget {
   final int score;
@@ -32,9 +33,13 @@ class ResultScreen extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          FlatButton(
+          RaisedButton(
             child: Text("Restart Quiz!"),
             onPressed: resetHandler,
+          ),
+          RaisedButton(
+            child: Text("Go Home page"),
+            onPressed: ()=> Navigator.of(context).popAndPushNamed(HomeScreen.routeName),
           ),
         ],
       ),

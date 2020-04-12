@@ -4,6 +4,7 @@ import '../Data.dart';
 import './credits_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const routeName = '/';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

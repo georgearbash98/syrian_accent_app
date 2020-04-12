@@ -30,7 +30,7 @@ class HomeScreenItem extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: new AssetImage(imgUrl),
+            image: AssetImage(imgUrl),
             fit: BoxFit.cover,
           ),
           gradient: LinearGradient(

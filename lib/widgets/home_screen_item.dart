@@ -19,28 +19,51 @@ class HomeScreenItem extends StatelessWidget {
       onTap: () => selectCategory(context),
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(15),
-      child: Container(
-        padding: const EdgeInsets.all(15),
-        child: Center(
+      child: Stack(children: <Widget>[
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.transparent,
+            image: DecorationImage(
+              fit: BoxFit.fill,
+              image: AssetImage(imgUrl),
+            ),
+            borderRadius: BorderRadius.circular(15),
+          ),
+          height: 350.0,
+        ),
+        Container(
+          height: 350.0,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              //color: Colors.white,
+              gradient: LinearGradient(
+                  begin: FractionalOffset.topRight,
+                  end: FractionalOffset.bottomLeft,
+                  colors: [
+                    Colors.white10,
+                    Colors.white24,
+                  ],
+                  stops: [
+                    0.0,
+                    1.0
+                  ])),
+        ),
+        Align(
+          alignment: Alignment.bottomCenter,
           child: Container(
-            width: 30,
-            color: Colors.white38,
-            child: Text(title),
+            decoration: BoxDecoration(
+              color: Colors.black45,
+              borderRadius: BorderRadius.circular(15),
+            ),
+            width: double.infinity,
+            child: Text(
+              title,
+              style: TextStyle(color: Colors.white, fontSize: 20,),
+              textAlign: TextAlign.center,
+            ),
           ),
-        ),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(imgUrl),
-            fit: BoxFit.cover,
-          ),
-          gradient: LinearGradient(
-            colors: [Colors.white10, Colors.black54],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          borderRadius: BorderRadius.circular(15),
-        ),
-      ),
+        )
+      ]),
     );
   }
 }

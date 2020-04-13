@@ -17,12 +17,12 @@ class HomeScreenItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => selectCategory(context),
-      splashColor: Theme.of(context).primaryColor,
+      splashColor: Colors.black,
       borderRadius: BorderRadius.circular(15),
       child: Stack(children: <Widget>[
         Container(
           decoration: BoxDecoration(
-            color: Colors.transparent,
+           // color: Colors.transparent,
             image: DecorationImage(
               fit: BoxFit.fill,
               image: AssetImage(imgUrl),

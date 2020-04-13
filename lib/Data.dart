@@ -1,6 +1,6 @@
 import './models/Question.dart';
 
-const GOVERNORATES = const [
+const ACCENTS = const [
   'شامي',
   'حلبي',
   'حمصي',

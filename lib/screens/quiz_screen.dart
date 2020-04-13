@@ -45,6 +45,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 questions: _questions,
                 questionIndex: _questionIndex,
                 answerQuestion: _answerQuestion,
+                key: ValueKey(_questionIndex)
               )
             : Center(
                 child: ResultScreen(_totalScore, _resetQuiz),

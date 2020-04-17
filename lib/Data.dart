@@ -1,13 +1,14 @@
 import './models/Question.dart';
+import './models/Accent.dart';
 
 const ACCENTS = const [
-  'شامي',
-  'حلبي',
-  'حمصي',
-  'حموي',
-  'درعاوي',
-  'جزراوي',
-];
+  Accent( 'شامي', 'assets/images/Damascus.png', DAMASCUS),
+  Accent( 'حلبي', 'assets/images/Damascus.png', DAMASCUS),
+  Accent( 'حمصي', 'assets/images/Damascus.png', DAMASCUS),
+  Accent( 'حموي', 'assets/images/Damascus.png', DAMASCUS),
+  Accent( 'درعاوي', 'assets/images/Damascus.png', DAMASCUS),
+  Accent( 'جزراوي', 'assets/images/Damascus.png', DAMASCUS),
+  ];
 
 const DAMASCUS = const [
   Question(

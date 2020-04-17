@@ -7,10 +7,9 @@ class Quiz extends StatefulWidget {
   final List<Question> questions;
   final int questionIndex;
   final Function answerQuestion;
-  //final Function answerQuestion;
 
   Quiz(
-      { //@required this.answerQuestion,
+      {
       @required this.questions,
       @required this.questionIndex,
       @required this.answerQuestion,
@@ -39,6 +38,7 @@ class _QuizState extends State<Quiz> {
     _rightIndex = widget.questions[widget.questionIndex].answerIndex;
     _answersCount = widget.answersCount;
     btnColor = new List<Color>(_answersCount);
+    //to set the initial color of all widget to the initial color (ex: blue)
     for (int i = 0; i < _answersCount; i++) btnColor[i] = initColor;
   }
 
@@ -55,6 +55,7 @@ class _QuizState extends State<Quiz> {
   }
 
   Widget _answers(String answerTxt) {
+    // to get the index of the displayed answer {helps with coloring the widget}
     int index =
         widget.questions[widget.questionIndex].allAnswers.indexOf(answerTxt);
         
@@ -76,8 +77,8 @@ class _QuizState extends State<Quiz> {
           setState(() {
             btnColor[index] = color;
           });
-          Timer(Duration(milliseconds: 600), ()=>widget.answerQuestion(score));
-          
+          // we use this so the user can see if his answer is correct or false then the app move to the next question
+          Timer(Duration(milliseconds: 400), ()=>widget.answerQuestion(score));
         },
       ),
     );
@@ -97,8 +98,3 @@ class _QuizState extends State<Quiz> {
     ]);
   }
 }
-
-// ...(questions[questionIndex].allAnswers as List<String>).map((answer) {
-//   // this call back only called when the user press on the answer
-//   return Answer(() => answerQuestion(answer['score']), answer['text']);
-// }).toList()

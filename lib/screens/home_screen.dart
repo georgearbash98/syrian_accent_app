@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
       body: GridView(
         padding: const EdgeInsets.all(15),
         children: ACCENTS
-            .map((accent) => HomeScreenItem(accent,'assets/images/Damascus.png'))
+            .map((accent) => HomeScreenItem(accent))
             .toList(),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,

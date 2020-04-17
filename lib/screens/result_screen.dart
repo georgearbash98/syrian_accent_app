@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:syrian_accent/screens/home_screen.dart';
+
+import 'package:getflutter/getflutter.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../screens/home_screen.dart';
 
 class ResultScreen extends StatelessWidget {
   final int score;
@@ -39,7 +43,19 @@ class ResultScreen extends StatelessWidget {
           ),
           RaisedButton(
             child: Text("Go Home page"),
-            onPressed: ()=> Navigator.of(context).popAndPushNamed(HomeScreen.routeName),
+            onPressed: () =>
+                Navigator.of(context).popAndPushNamed(HomeScreen.routeName),
+          ),
+          GFButton(
+            onPressed: () {
+              
+            },
+            text: "Whatsapp",
+            icon: FaIcon(
+              FontAwesomeIcons.whatsapp,
+              color: Colors.white,
+            ),
+            color: Colors.green,
           ),
         ],
       ),

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
+import '../models/Accent.dart';
 import '../screens/quiz_screen.dart';
 
 class HomeScreenItem extends StatelessWidget {
-  final String title;
-  final String imgUrl;
+  final Accent accent;
 
-  HomeScreenItem(this.title, this.imgUrl);
+  HomeScreenItem(this.accent);
 
   void selectCategory(BuildContext ctx) {
     Navigator.of(ctx).pushNamed(QuizScreen.routeName, arguments: {
-      'title': title,
+      'title': accent.title,
     });
   }
 
@@ -25,7 +25,7 @@ class HomeScreenItem extends StatelessWidget {
            // color: Colors.transparent,
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage(imgUrl),
+              image: AssetImage(accent.imgUrl),
             ),
             borderRadius: BorderRadius.circular(15),
           ),
@@ -57,7 +57,7 @@ class HomeScreenItem extends StatelessWidget {
             ),
             width: double.infinity,
             child: Text(
-              title,
+              accent.title,
               style: TextStyle(color: Colors.white, fontSize: 20,),
               textAlign: TextAlign.center,
             ),
